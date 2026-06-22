@@ -42,7 +42,7 @@ export function Modal({ title, open, onClose, children }: ModalProps) {
             type="button"
             onClick={onClose}
             aria-label="Close modal"
-            className="rounded-lg p-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+            className="rounded-lg p-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-100"
           >
             <X size={18} />
           </button>

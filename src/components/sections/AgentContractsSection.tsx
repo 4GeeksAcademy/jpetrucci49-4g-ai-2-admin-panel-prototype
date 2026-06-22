@@ -17,29 +17,29 @@ export function AgentContractsSection({ contracts }: AgentContractsSectionProps)
   const [selectedContract, setSelectedContract] = useState<AgentContract | null>(null)
 
   return (
-    <section>
-      <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white/80 shadow-sm dark:border-slate-800 dark:bg-slate-950/70">
+    <section className="space-y-6">
+      <article className="shadow-soft-panel overflow-hidden rounded-2xl border border-slate-200/80 bg-white/85 dark:border-slate-800 dark:bg-slate-950/70">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-slate-200 dark:divide-slate-800">
             <thead className="bg-slate-50 dark:bg-slate-900/70">
               <tr className="text-left text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                <th className="px-4 py-3">Client</th>
-                <th className="px-4 py-3">Rented Agent</th>
-                <th className="px-4 py-3">Contracted Skills</th>
-                <th className="px-4 py-3">Contract Dates</th>
-                <th className="px-4 py-3">Total Amount</th>
-                <th className="px-4 py-3 text-right">Actions</th>
+                <th className="px-5 py-3.5">Client</th>
+                <th className="px-5 py-3.5">Rented Agent</th>
+                <th className="px-5 py-3.5">Contracted Skills</th>
+                <th className="px-5 py-3.5">Contract Dates</th>
+                <th className="px-5 py-3.5">Total Amount</th>
+                <th className="px-5 py-3.5 text-right">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 text-sm dark:divide-slate-800">
               {contracts.map((contract) => (
-                <tr key={contract.id} className="text-slate-700 dark:text-slate-200">
-                  <td className="px-4 py-3 font-medium">{contract.client}</td>
-                  <td className="px-4 py-3">{contract.rentedAgent}</td>
-                  <td className="px-4 py-3">{contract.contractedSkills.join(', ')}</td>
-                  <td className="px-4 py-3">{contract.startDate} - {contract.endDate}</td>
-                  <td className="px-4 py-3">{currency.format(contract.totalAmount)}</td>
-                  <td className="px-4 py-3 text-right">
+                <tr key={contract.id} className="text-slate-700 transition hover:bg-slate-50/70 dark:text-slate-200 dark:hover:bg-slate-900/40">
+                  <td className="px-5 py-4 font-medium">{contract.client}</td>
+                  <td className="px-5 py-4">{contract.rentedAgent}</td>
+                  <td className="px-5 py-4">{contract.contractedSkills.join(', ')}</td>
+                  <td className="px-5 py-4">{contract.startDate} - {contract.endDate}</td>
+                  <td className="px-5 py-4">{currency.format(contract.totalAmount)}</td>
+                  <td className="px-5 py-4 text-right">
                     <ActionMenu
                       ariaLabel={`Actions for contract ${contract.client}`}
                       actions={[

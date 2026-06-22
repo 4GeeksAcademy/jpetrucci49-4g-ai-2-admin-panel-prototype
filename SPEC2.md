@@ -18,7 +18,7 @@ Improve the visual appeal and responsiveness of the AgentHub Admin Panel, with s
 - Elevate the entire interface to feel more premium and professional
 - Improve card design, spacing, typography, and color usage
 - Better use of shadows, borders, and visual hierarchy
-- Maintain the red + dark theme while making it more polished
+- Maintain the light + dark theme while making it more polished
 
 **3. Responsive Behavior**
 - On mobile (< 768px): Collapse sidebar into a hamburger menu with slide-in overlay

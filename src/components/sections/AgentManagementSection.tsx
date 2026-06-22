@@ -19,17 +19,17 @@ export function AgentManagementSection({ agents }: AgentManagementSectionProps) 
   )
 
   return (
-    <section className="space-y-4">
-      <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white/80 shadow-sm dark:border-slate-800 dark:bg-slate-950/70">
+    <section className="space-y-6">
+      <article className="shadow-soft-panel overflow-hidden rounded-2xl border border-slate-200/80 bg-white/85 dark:border-slate-800 dark:bg-slate-950/70">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-slate-200 dark:divide-slate-800">
             <thead className="bg-slate-50 dark:bg-slate-900/70">
               <tr className="text-left text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                <th className="px-4 py-3">Agent Name</th>
-                <th className="px-4 py-3">Owner</th>
-                <th className="px-4 py-3">Status</th>
-                <th className="px-4 py-3">Skills</th>
-                <th className="px-4 py-3 text-right">Actions</th>
+                <th className="px-5 py-3.5">Agent Name</th>
+                <th className="px-5 py-3.5">Owner</th>
+                <th className="px-5 py-3.5">Status</th>
+                <th className="px-5 py-3.5">Skills</th>
+                <th className="px-5 py-3.5 text-right">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200 text-sm dark:divide-slate-800">
@@ -37,10 +37,10 @@ export function AgentManagementSection({ agents }: AgentManagementSectionProps) 
                 const isExpanded = expanded.has(agent.id)
 
                 return (
-                  <tr key={agent.id} className="align-top text-slate-700 dark:text-slate-200">
-                    <td className="px-4 py-3 font-medium">{agent.name}</td>
-                    <td className="px-4 py-3">{agent.owner}</td>
-                    <td className="px-4 py-3">
+                  <tr key={agent.id} className="align-top text-slate-700 transition hover:bg-slate-50/70 dark:text-slate-200 dark:hover:bg-slate-900/40">
+                    <td className="px-5 py-4 font-medium">{agent.name}</td>
+                    <td className="px-5 py-4">{agent.owner}</td>
+                    <td className="px-5 py-4">
                       <Badge
                         tone={
                           agent.status === 'Active'
@@ -53,7 +53,7 @@ export function AgentManagementSection({ agents }: AgentManagementSectionProps) 
                         {agent.status}
                       </Badge>
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-5 py-4">
                       <button
                         type="button"
                         onClick={() =>
@@ -67,7 +67,7 @@ export function AgentManagementSection({ agents }: AgentManagementSectionProps) 
                             return nextExpanded
                           })
                         }
-                        className="rounded-lg px-2 py-1 text-xs font-medium text-teal-700 transition hover:bg-teal-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 dark:text-teal-300 dark:hover:bg-teal-950"
+                        className="rounded-lg px-2 py-1 text-xs font-medium text-sky-700 transition hover:bg-sky-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:text-sky-300 dark:hover:bg-sky-950/60"
                         aria-expanded={isExpanded}
                       >
                         {isExpanded ? 'Hide Skills' : 'Show Skills'}
@@ -88,7 +88,7 @@ export function AgentManagementSection({ agents }: AgentManagementSectionProps) 
                         </ul>
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-right">
+                    <td className="px-5 py-4 text-right">
                       <ActionMenu
                         ariaLabel={`Actions for ${agent.name}`}
                         actions={[

@@ -9,10 +9,10 @@ interface MetricCardProps {
 
 export function MetricCard({ title, value, hint, icon }: MetricCardProps) {
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm backdrop-blur-sm transition hover:shadow-md dark:border-slate-800 dark:bg-slate-950/70">
+    <article className="shadow-soft-panel rounded-2xl border border-slate-200/80 bg-white/85 p-5 backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-950/70 dark:hover:border-slate-700">
       <div className="mb-3 flex items-center justify-between">
         <p className="text-sm font-medium text-slate-600 dark:text-slate-300">{title}</p>
-        <div className="rounded-xl bg-teal-100 p-2 text-teal-700 dark:bg-teal-950 dark:text-teal-300">
+        <div className="rounded-xl bg-sky-100 p-2 text-sky-700 dark:bg-sky-950/80 dark:text-sky-300">
           {icon}
         </div>
       </div>

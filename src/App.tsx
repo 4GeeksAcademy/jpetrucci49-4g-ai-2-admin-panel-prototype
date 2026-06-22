@@ -95,22 +95,22 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-page-pattern text-slate-800 dark:text-slate-100">
-      <div className="mx-auto flex min-h-screen max-w-[1500px]">
-        <Sidebar
-          activeSection={activeSection}
-          onSelectSection={setActiveSection}
-          mobileOpen={mobileOpen}
-          onCloseMobile={() => setMobileOpen(false)}
-        />
+      <Sidebar
+        activeSection={activeSection}
+        onSelectSection={setActiveSection}
+        mobileOpen={mobileOpen}
+        onCloseMobile={() => setMobileOpen(false)}
+      />
 
-        <div className="flex min-w-0 flex-1 flex-col">
-          <TopBar
-            title={sectionMeta[activeSection].title}
-            subtitle={sectionMeta[activeSection].subtitle}
-            onOpenMobileSidebar={() => setMobileOpen(true)}
-          />
-          <main className="animate-fade-in p-4 sm:p-6">{content}</main>
-        </div>
+      <div className="flex min-h-screen min-w-0 flex-1 flex-col md:pl-72">
+        <TopBar
+          title={sectionMeta[activeSection].title}
+          subtitle={sectionMeta[activeSection].subtitle}
+          onOpenMobileSidebar={() => setMobileOpen(true)}
+        />
+        <main className="animate-fade-in flex-1 p-4 sm:p-6 lg:p-8">
+          <div className="mx-auto w-full max-w-7xl">{content}</div>
+        </main>
       </div>
     </div>
   )

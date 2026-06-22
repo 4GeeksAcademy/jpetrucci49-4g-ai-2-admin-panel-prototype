@@ -25,8 +25,8 @@ export function DashboardSection({
   const max = Math.max(...weeklyActivity)
 
   return (
-    <section className="space-y-6">
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+    <section className="space-y-8">
+      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           title="Total Revenue (This Month)"
           value={currency.format(revenueThisMonth)}
@@ -53,16 +53,16 @@ export function DashboardSection({
         />
       </div>
 
-      <article className="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-950/70">
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+      <article className="shadow-soft-panel rounded-2xl border border-slate-200/80 bg-white/85 p-6 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-950/70">
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-2">
           <h3 className="font-heading text-lg font-semibold text-slate-900 dark:text-slate-100">Weekly Activity</h3>
           <p className="text-sm text-slate-500 dark:text-slate-400">Chart placeholder for sessions, alerts, and task volume</p>
         </div>
-        <div className="grid grid-cols-7 items-end gap-3 rounded-xl border border-slate-200 bg-slate-50/80 p-4 dark:border-slate-700 dark:bg-slate-900/70">
+        <div className="grid grid-cols-7 items-end gap-3 rounded-xl border border-slate-200/80 bg-slate-50/90 p-4 dark:border-slate-700 dark:bg-slate-900/70">
           {weeklyActivity.map((value, index) => (
             <div key={`bar-${value}-${index}`} className="flex flex-col items-center gap-2">
               <div
-                className="w-full rounded-lg bg-gradient-to-t from-teal-500 to-cyan-400"
+                className="w-full rounded-lg bg-gradient-to-t from-sky-600 to-cyan-400"
                 style={{
                   height: `${Math.max((value / max) * 180, 16)}px`,
                 }}

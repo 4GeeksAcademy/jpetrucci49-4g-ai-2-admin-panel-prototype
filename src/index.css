@@ -23,23 +23,29 @@ body {
 
 @layer utilities {
   .bg-page-pattern {
-    background-color: #f4f9fa;
+    background-color: #f8fafc;
     background-image:
-      radial-gradient(circle at 15% 20%, rgba(45, 212, 191, 0.15), transparent 28%),
-      radial-gradient(circle at 85% 10%, rgba(14, 165, 233, 0.16), transparent 32%),
-      radial-gradient(circle at 70% 75%, rgba(8, 145, 178, 0.1), transparent 35%);
+      radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.14), transparent 34%),
+      radial-gradient(circle at 85% 8%, rgba(99, 102, 241, 0.12), transparent 36%),
+      radial-gradient(circle at 72% 76%, rgba(148, 163, 184, 0.1), transparent 40%);
   }
 
   .dark .bg-page-pattern {
     background-color: #020617;
     background-image:
-      radial-gradient(circle at 15% 20%, rgba(20, 184, 166, 0.16), transparent 32%),
-      radial-gradient(circle at 85% 10%, rgba(2, 132, 199, 0.18), transparent 34%),
-      radial-gradient(circle at 70% 75%, rgba(8, 47, 73, 0.35), transparent 38%);
+      radial-gradient(circle at 12% 20%, rgba(14, 116, 144, 0.24), transparent 34%),
+      radial-gradient(circle at 88% 12%, rgba(37, 99, 235, 0.2), transparent 36%),
+      radial-gradient(circle at 70% 75%, rgba(30, 41, 59, 0.4), transparent 40%);
   }
 
   .animate-fade-in {
-    animation: fade-in 360ms ease-out;
+    animation: fade-in 320ms ease-out;
+  }
+
+  .shadow-soft-panel {
+    box-shadow:
+      0 10px 24px -18px rgba(15, 23, 42, 0.5),
+      0 12px 36px -20px rgba(14, 116, 144, 0.2);
   }
 }
 
