@@ -34,6 +34,11 @@ export function Modal({ title, open, onClose, children }: ModalProps) {
       role="dialog"
       aria-modal="true"
       aria-label={title}
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) {
+          onClose()
+        }
+      }}
     >
       <div className="w-full max-w-2xl rounded-2xl border border-slate-200 bg-white p-5 shadow-2xl dark:border-slate-800 dark:bg-slate-900">
         <div className="mb-4 flex items-center justify-between">
